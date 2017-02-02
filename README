@@ -1,4 +1,5 @@
-# dictlist -- a 1 to many dictionary
+[![Build Status](https://travis-ci.org/astyonax/dictlist.svg?branch=master)](https://travis-ci.org/astyonax/dictlist)
+# dictlist -- a 1 to many dictionary 
 
 A python implementation of a dictionary mapping one key to a list of values.
 

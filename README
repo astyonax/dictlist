@@ -1,0 +1,14 @@
+# dictlist -- a 1 to many dictionary
+
+A python implementation of a dictionary mapping one key to a list of values.
+
+## Example
+``` python
+>>> from dictlist import dictlist
+>>> dl = dictlist()
+>>> dl['A']='a'
+>>> dl.update({'B':'b','C':'c'})
+>>> dl.update({'B':'b1','C':'c1'})
+>>> dl
+{'A': ['a'], 'C': ['c', 'c1'], 'B': ['b', 'b1']}
+```

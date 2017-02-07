@@ -24,6 +24,10 @@ class dictlist(dict):
         """
         Updates the dictionary with the keys and values
 
+        --
+        Copied from `UserDict`'s implementation
+        Modified to use the custom `__setitem__` method
+
         Parameters
         ----------
         other : None
@@ -43,10 +47,6 @@ class dictlist(dict):
         >>> dl.update({'C':'c1'})
         >>> dl == {'C': ['c', 'c1'], 'B': ['b']}
         True
-
-        --
-        Copied from UserDict implementation
-        Modified to use the custom __setitem__ method
         """
 
         # Make progressively weaker assumptions about "other"
@@ -144,8 +144,24 @@ class dictlist(dict):
 
 
     def popkw(self,key,value):
-        """remove all occurences of ``value`` in ``key``
-        TODO: write doc and doctests"""
+        """Removes all occurences of ``value`` in ``key``
+
+        Parameters
+        ----------
+            key : a key
+            value : a value
+
+        >>> from dictlist import dictlist
+        >>> dl = dictlist()
+        >>> dl.update({'B':'b','C':'c'})
+        >>> dl.update({'C':'c1'})
+        >>> dl.update({'C':'c1'})
+        >>> dl == {'C': ['c', 'c1','c1'], 'B': ['b']}
+        True
+        >>> dl.popkw('C','c1')
+        >>> dl == {'C': ['c'], 'B': ['b']}
+        True
+        """
         vlist = self[key]
         vlist_new = [i for i in vlist if i != value]
         super(dictlist,self).__setitem__(key,vlist_new)

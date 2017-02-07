@@ -1,5 +1,5 @@
 # dictlist [![Build Status](https://travis-ci.org/astyonax/dictlist.svg?branch=master)](https://travis-ci.org/astyonax/dictlist)
-A one-to-may dictionary: python implementation of a dictionary mapping one key to a list of values.
+A one-to-many dictionary: python implementation of a dictionary mapping one key to a list of values.
 
 
 ## Examples

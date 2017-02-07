@@ -20,7 +20,6 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
 
-
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -40,8 +39,7 @@ templates_path = ['_templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
-#
-# source_suffix = ['.rst', '.md']
+
 source_suffix = '.rst'
 
 # The master toctree document.
@@ -77,7 +75,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 pygments_style = 'sphinx'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = False
+todo_include_todos = True
 
 
 # -- Options for HTML output ----------------------------------------------
@@ -154,6 +152,5 @@ texinfo_documents = [
      author, 'dictlist', 'One line description of project.',
      'Miscellaneous'),
 ]
-
 
 
